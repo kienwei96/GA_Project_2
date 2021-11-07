@@ -10,7 +10,7 @@ export default function Search() {
       return (
         <>
         <div className="SearchPanel">
-        <Link to='/search/hdbContractor'><Button variant="contained" >HDB Directory of Contractor</Button>
+        <Link to='/search/hdbContractor'><Button variant="contained" >HDB Directory of Renovation Contractor</Button>
         </Link>
         <Link to='/search/bcaContractor'><Button variant="contained" >BCA Registered Contractor</Button>
         </Link>
