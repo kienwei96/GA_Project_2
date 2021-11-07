@@ -2,18 +2,20 @@ import React, { useEffect, useRef, useState } from "react";
 import "./SearchHDB.css";
 import Button from '@mui/material/Button';
 import DataTable from "./DataTable";
+import { useLocalStorage } from "./Hooks/UseLocalStorage"
 
 
 
 export default function SearchHDB() {
     const companySearch = useRef();
-    const [data, setData] = useState();
+    const [savedData, setSavedData] = useLocalStorage();
 
     let search;
     const handleSubmit =() => {
         search = companySearch.current.value.replace(/\s/, "+")
         callApi(search)
     }
+    
     
     async function callApi(search){
         try {
@@ -22,7 +24,7 @@ export default function SearchHDB() {
             let completeData = rawData.result.records;
             console.log("rawdata is:",rawData)
             console.log("complete data is:",completeData)
-            setData(
+            setSavedData(
                 completeData.map((ele) => ({
                     address: ele.address,
                     name: ele.company_name,
@@ -43,8 +45,7 @@ export default function SearchHDB() {
 
 
 
-    
-    console.log("data is: ",data)
+    console.log("savedData is:" , savedData)
 
     return (
       <>
@@ -52,7 +53,7 @@ export default function SearchHDB() {
       <input placeholder="Search by company name or UEN no..." type="text" ref={companySearch} />
       <Button onClick={handleSubmit} sx={{ width: '80%', maxWidth: '150px', margin: '0 auto', height: '30px' }} variant="contained" >Search</Button>
       </div>
-      <DataTable data={data}/>
+      <DataTable data={savedData}/>
       </>
 
     )
