@@ -1,0 +1,18 @@
+.searchHDB {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    margin-top: 50px;
+}
+
+input {
+    margin: 1em auto;
+    display: block;
+}
+
+
+input[type=text] {
+    
+    width: 30em;
+    height: 20px;
+}
