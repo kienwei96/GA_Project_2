@@ -5,6 +5,8 @@ import "./Search.css";
 
 export default function Search() {
 
+  localStorage.clear();
+
 
 
       return (
