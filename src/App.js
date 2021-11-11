@@ -9,6 +9,8 @@ import SearchBCA from "./components/SearchComp/Bca/SearchBCA";
 import NavBar from "./components/NavBar";
 import HdbResult from "./components/SearchComp/Hdb/hdbInformation";
 import BcaResult from "./components/SearchComp/Bca/bcaInformation";
+import HdbTable from "./components/SearchComp/Hdb/HdbDataTable";
+import BcaTable from "./components/BcaTable";
 import {
   createTheme,
   ThemeProvider,
@@ -105,6 +107,7 @@ function App() {
     <ThemeProvider theme={theme}>
     <NavBar/>
     <div className="App">
+      
       <main>
         <Switch>
         <Route path="/search/hdbContractor/:id">
@@ -122,11 +125,17 @@ function App() {
         <Route path="/search">
           <Search/>
         </Route>
-        <Route path="/home">
-          <Home/>
-        </Route>
         <Route path="/about">
           <About/>
+        </Route>
+        <Route path="/renovation">
+          <HdbTable data={hdbData}/>
+        </Route>
+        <Route path="/windows">
+          <BcaTable data={bcaData} category={"RW01"}/>
+        </Route>
+        <Route path="/">
+          <Home/>
         </Route>
         </Switch>
       </main>
