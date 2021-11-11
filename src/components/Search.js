@@ -12,9 +12,9 @@ export default function Search() {
       return (
         <>
         <div className="SearchPanel">
-        <Link to='/search/hdbContractor'><Button variant="contained" >HDB Directory of Renovation Contractor</Button>
+        <Link style={{ textDecoration: 'none' }} to='/search/hdbContractor'><Button variant="contained" >Directory of Renovation Contractor</Button>
         </Link>
-        <Link to='/search/bcaContractor'><Button variant="contained" >BCA Registered Contractor</Button>
+        <Link style={{ textDecoration: 'none' }} to='/search/bcaContractor'><Button variant="contained" >BCA -Registered Contractor</Button>
         </Link>
         </div>
         </>
