@@ -15,7 +15,7 @@ import SaveAlt from "@material-ui/icons/SaveAlt";
 import Search from "@material-ui/icons/Search";
 import ViewColumn from "@material-ui/icons/ViewColumn";
 import Info from "@material-ui/icons/Info";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import "@fontsource/mulish/300.css";
 import { Typography } from "@mui/material";
 
@@ -43,10 +43,9 @@ const tableIcons = {
 export default function DataTable(props) {
 
     const data = props.data;
-    const category = props.category;
-    console.log(category);
+    const category = useParams().category;
     const history = useHistory();
-    const filterData = data.filter(ele => ele.workhead == category)
+    const filterData = data.filter(ele => ele.workhead === category)
     console.log("filterData is:", filterData);
 
       return (
