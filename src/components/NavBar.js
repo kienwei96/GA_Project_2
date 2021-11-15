@@ -15,7 +15,7 @@ export default function NavBar() {
             <Typography variant="h6" component="span" sx={{ flexGrow: 1, fontWeight: 600, }}>
             <Link to='/' style={{textDecoration: 'none', color: 'inherit'}} onClick={() => {window.location.href='/'}}><Button color="inherit">Contractor Finder</Button></Link>
             </Typography>
-            <Link to='/home' style={{textDecoration: 'none', color: 'inherit'}}><Button color="inherit">Home</Button></Link>
+            <Link to='/' style={{textDecoration: 'none', color: 'inherit'}}><Button color="inherit">Home</Button></Link>
             <Link to='/search' style={{textDecoration: 'none', color: 'inherit'}}><Button color="inherit">Search</Button></Link>
             <Link to='/about' style={{textDecoration: 'none', color: 'inherit'}}><Button color="inherit">About</Button></Link>
           </Toolbar>
