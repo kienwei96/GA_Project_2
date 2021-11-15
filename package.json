@@ -4,6 +4,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+      "@arcgis/core": "^4.21.0",
+      "esri-loader": "^2.9.2",
+      "ncp": "^2.0.0",
       "@emotion/react": "^11.5.0",
       "@emotion/styled": "^11.3.0",
       "@fontsource/mulish": "^4.5.1",
@@ -32,6 +35,8 @@
   "scripts": {
       "start": "react-scripts start",
       "build": "react-scripts build",
+      "copy": "ncp ./node_modules/@arcgis/core/assets ./public/assets",
+      "postinstall": "npm run copy",
       "test": "react-scripts test",
       "eject": "react-scripts eject"
   },
