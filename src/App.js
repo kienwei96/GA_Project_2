@@ -11,6 +11,10 @@ import HdbResult from "./components/SearchComp/Hdb/hdbInformation";
 import BcaResult from "./components/SearchComp/Bca/bcaInformation";
 import HdbTable from "./components/SearchComp/Hdb/HdbDataTable";
 import BcaTable from "./components/BcaTable";
+import LoadingPage from "./components/LoadingPage";
+import { Button } from "@mui/material";
+import { useHistory } from "react-router-dom";
+import Background from "./image/background.jpg";
 import {
   createTheme,
   ThemeProvider,
@@ -43,6 +47,8 @@ let theme = createTheme({
 theme = responsiveFontSizes(theme);
 
 function App() {
+  
+  const history = useHistory();
 
   const [hdbData, sethdbData] = useState();
   const [bcaData, setbcaData] = useState();
@@ -103,10 +109,12 @@ function App() {
   console.log("hdbData:" ,hdbData);
 
 
+
   return (
     <ThemeProvider theme={theme}>
     <NavBar/>
-    <div className="App">
+    {(hdbData === undefined || bcaData === undefined)?<LoadingPage/>:console.log('ok!')}
+    <div className="App" >
       
       <main>
         <Switch>
@@ -130,9 +138,11 @@ function App() {
         </Route>
         <Route path="/renovation">
           <HdbTable data={hdbData}/>
+          <Button onClick={() => history.goBack()} sx={{ width: '80%', maxWidth: '150px', margin: '0 auto', display: 'block' }} variant="contained" >Back</Button>
         </Route>
-        <Route path="/windows">
-          <BcaTable data={bcaData} category={"RW01"}/>
+        <Route path="/:category">
+          <BcaTable data={bcaData}/>
+          <Button onClick={() => history.goBack()} sx={{ width: '80%', maxWidth: '150px', margin: '0 auto', display: 'block' }} variant="contained" >Back</Button>
         </Route>
         <Route path="/">
           <Home/>
