@@ -13,6 +13,13 @@ export default function Information(props) {
 
 
     const company = props.data?.filter( data => (data.id) === parseInt(params.id))
+    
+    if(!company) {
+      return (
+        <div></div>
+      )
+    }
+    
     const company_id = (company[0].buildingID==="na")?' ':company[0].buildingID;
     const company_street = (company[0].street==="na")?' ':company[0].street;
     const company_unit = (company[0].unit==="na")?' ':company[0].unit;
