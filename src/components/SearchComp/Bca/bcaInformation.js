@@ -13,7 +13,7 @@ export default function Information(props) {
 
 
     const company = props.data?.filter( data => (data.id) === parseInt(params.id))
-    
+
     if(!company) {
       return (
         <div></div>
@@ -30,25 +30,29 @@ export default function Information(props) {
 
     return (
       <>
-      <h2>Company Information</h2>
+      <div className="center">
+      <h2>{company[0].name}</h2>
+      <Map data={company[0]} address={company_id+' '+company_street+' '+company_unit+' '+company_buildingName+' '+company_postal}/>
+      </div>
+      <div className="outer">
       <div className="body">
         <div>
-          <div className="company_name">{`${company?company[0].name:''}`}</div>
+          <div className="heading">{`Company Information`}</div>
           <div>{`UEN No. : ${company?company[0].uen:''}`}</div>
           <div>{`Address : ${company?company_id+' '+company_street+' '+company_unit+' '+company_buildingName+' '+company_postal:''}`}</div>
           <div>{`Contact No. : ${company?company[0].contact:''}`}</div>
           <div>{`Workhead : ${company?company[0].workhead:''}`}</div>
           <div>{`Grade : ${company?company[0].grade:''}`}</div>
           <div>{`License Expiry Date : ${company?company[0].expiry:''}`}</div>
-
         </div>
       </div>
+      </div>
       <hr/>
+      <div className="center">
       <Button onClick={() => history.goBack()} sx={{ width: '80%', maxWidth: '150px', margin: '0 auto', height: '30px' }} variant="contained" >Back</Button>
+      </div>
       <br/>
-      <br/>
-      <br/>
-      <Map data={company[0]} address={company_id+' '+company_street+' '+company_unit+' '+company_buildingName+' '+company_postal}/>
+      
       </>
 
     )
