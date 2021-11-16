@@ -6,6 +6,7 @@ import { useLocalStorage } from "../../Hooks/UseLocalStorage"
 
 
 
+
 export default function SearchHDB() {
     const companySearch = useRef();
     const [savedData, setSavedData] = useLocalStorage();
