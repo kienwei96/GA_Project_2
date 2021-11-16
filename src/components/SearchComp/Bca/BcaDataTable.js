@@ -45,6 +45,12 @@ export default function DataTable(props) {
     const data = props.data;
     const history = useHistory();
 
+    if(!data) {
+      return (
+        <div></div>
+      )
+    }
+
       return (
         <Typography component="span">
       <div

@@ -12,7 +12,11 @@ export default function Information(props) {
 
 
     const company = props.data?.filter( data => parseInt(data.id) === parseInt(params.id))
-    console.log(company)
+    if(!company) {
+      return (
+        <div></div>
+      )
+    }
 
 
     return (
