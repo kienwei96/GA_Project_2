@@ -1,6 +1,6 @@
 {
   "name": "contractorapp",
-  "homepage": ".",
+  "homepage": "https://kienwei96.github.io/GA_Project_2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -35,6 +35,8 @@
   "scripts": {
       "start": "react-scripts start",
       "build": "react-scripts build",
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d build",
       "copy": "ncp ./node_modules/@arcgis/core/assets ./public/assets",
       "postinstall": "npm run copy",
       "test": "react-scripts test",
