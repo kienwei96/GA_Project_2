@@ -23,10 +23,14 @@ export default function Information(props) {
 
     return (
       <>
-      <h2>Company Information</h2>
+      <div className="center">
+      <h2>{company[0].name}</h2>
+      <Map data={company[0]} address={address}/>
+      </div>
+      <div className="outer">
       <div className="body">
-        <div>
-          <div className="company_name">{`${company[0].name}`}</div>
+        <div className="container">
+          <div className="heading">{`Company Information`}</div>
           <div>{`HDB Ref No. : ${(company[0].ref==="na")?'NIL':company[0].ref}`}</div>
           <div>{`UEN No. : ${(company[0].uen==="na")?'NIL':company[0].uen}`}</div>
           <div>{`Address : ${address}`}</div>
@@ -34,9 +38,12 @@ export default function Information(props) {
           <div>{`Email address : ${(company[0].email==="na")?'NIL':company[0].email}`}</div>
         </div>
       </div>
+      </div>
       <hr/>
+      <div className="center">
       <Button onClick={() => history.goBack()} sx={{ width: '80%', maxWidth: '150px', margin: '0 auto', height: '30px' }} variant="contained" >Back</Button>
-      <Map data={company[0]} address={address}/>
+      </div>
+      <br/>
       </>
 
     )
