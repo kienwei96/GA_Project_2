@@ -57,8 +57,8 @@ function Map(props) {
             view.graphics.add(new Graphic({
                 symbol: {
                   type: "simple-marker",
-                  color: "#000000",
-                  size: "8px",
+                  color: "red",
+                  size: "12px",
                   outline: {
                     color: "#ffffff",
                     width: "1px"
