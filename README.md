@@ -30,15 +30,18 @@ https://developers.arcgis.com/javascript/latest/find-places/ (ArcGIS display map
 
 ## Wireframes
 
-Home Component
-<img src="./wireframe/Home.png" style="border: 1px solid">
+**Home Component**
+
+<img src="./wireframe/Home.png" style="border:solid">
 <br/>
 <br/>
 
-Search Component  
+**Search Component**
+
 ![](wireframe/Search.png)
 <br/>
 <br/>
 
-Information Component  
+**Information Component**
+
 ![](wireframe/Information.png)
