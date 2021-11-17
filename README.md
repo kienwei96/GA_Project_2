@@ -28,10 +28,10 @@ https://developers.arcgis.com/javascript/latest/find-places/ (For ArcGIS display
 
 ## Wireframes
 Home Component  
-![](wireframes/Home.png)
+![](wireframe/Home.png)
 
 Search Component  
-![](wireframes/Search.png)
+![](wireframe/Search.png)
 
 Information Component  
-![](wireframes/Information.png)
+![](wireframe/Information.png)
