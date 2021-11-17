@@ -30,7 +30,8 @@ https://developers.arcgis.com/javascript/latest/find-places/ (ArcGIS display map
 
 ## Wireframes
 
-Home Component  
+Home Component
+<img src="./wireframe/Home.png" width="200">  
 ![](wireframe/Home.png | width=250)
 <br/>
 
