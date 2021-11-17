@@ -32,7 +32,7 @@ https://developers.arcgis.com/javascript/latest/find-places/ (ArcGIS display map
 
 **Home Component**
 
-<img src="./wireframe/Home.png" style="border:solid">
+![](wireframe/Home.png)
 <br/>
 <br/>
 
