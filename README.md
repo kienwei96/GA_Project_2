@@ -4,11 +4,13 @@ Contractor Finder is an application built using ReactJS that compiles all the co
 ## About
 The objective of this application is to allow users to look for contractor by categories or to check/verify the contractor is recognized by HDB and BCA in Singapore for their HDB renovation or maintenance works.
 
-## Tech Stack
+## Technologies
 This site was created using ReactJS
  
-**Maps**: Esri ArcGIS WebMap 
+**Maps**: Esri ArcGIS WebMap
+
 **Tables**: material-table  
+
 **Styling**: Material-UI  
 
 
