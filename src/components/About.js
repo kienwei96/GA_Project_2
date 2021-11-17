@@ -19,7 +19,7 @@ const About = () => {
           This site was created using ReactJS
           <br />
           <br />
-          Maps: ArcGIS API for JavaScript
+          Maps: Esri ArcGIS Webmap
           <br />
           Tables: material-table
           <br />
