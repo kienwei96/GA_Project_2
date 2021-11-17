@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Contractor Finder
+Contractor Finder is an application built using ReactJS that compiles all the contractor data which recognized by HDB and BCA in Singapore. There are two main function of this app where user can either look for the contractor information by categories or search by company details (name or UEN no.).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About
+The objective of this application is to allow users to look for contractor by categories or to check/verify the contractor is recognized by HDB and BCA in Singapore for their HDB renovation or maintenance works.
 
-## Available Scripts
+## Tech Stack
+This site was created using ReactJS
+ 
+**Maps**: Esri ArcGIS WebMap 
+**Tables**: material-table  
+**Styling**: Material-UI  
 
-In the project directory, you can run:
 
-### `npm start`
+Contractor data from data.gov.sg API  
+Geocoding and maps from ArcGIS API for JavaScript 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## APIs
+https://data.gov.sg/dataset/listing-of-registered-renovation-contractors (HDB Directory of Renovation Contractors)
+https://data.gov.sg/dataset/listing-of-registered-contractors (BCA Registered Contractor)
+https://developers.arcgis.com/javascript/latest/find-places/ (For ArcGIS display map and geocoding)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## User Story
+1) User will be able to choose the categories of contractor via the first loaded page
+2) User will be able to click on the Search button in the navbar to link to the search component
+3) Within the search component, the user will be able to search for the specific contractors
+4) The user will be able to double click on each contractor which display in the table row to view more information about the company such as contact number, email address, workhead, grade, license expiry date and location on the map.
 
-### `npm test`
+## Wireframes
+Home Component  
+![](wireframes/Home.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Search Component  
+![](wireframes/Search.png)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Information Component  
+![](wireframes/Information.png)
