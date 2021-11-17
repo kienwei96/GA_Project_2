@@ -14,13 +14,13 @@ This site was created using ReactJS
 **Styling**: Material-UI  
 
 
-Contractor data from data.gov.sg API  
-Geocoding and maps from ArcGIS API for JavaScript 
+_Contractor data from data.gov.sg API_  
+_Geocoding and maps from ArcGIS API for JavaScript_
 
 ## APIs
 https://data.gov.sg/dataset/listing-of-registered-renovation-contractors (HDB Directory of Renovation Contractors)
 https://data.gov.sg/dataset/listing-of-registered-contractors (BCA Registered Contractor)
-https://developers.arcgis.com/javascript/latest/find-places/ (For ArcGIS display map and geocoding)
+https://developers.arcgis.com/javascript/latest/find-places/ (ArcGIS display map and geocoding)
 
 ## User Story
 1) User will be able to choose the categories of contractor via the first loaded page
@@ -29,11 +29,14 @@ https://developers.arcgis.com/javascript/latest/find-places/ (For ArcGIS display
 4) The user will be able to double click on each contractor which display in the table row to view more information about the company such as contact number, email address, workhead, grade, license expiry date and location on the map.
 
 ## Wireframes
+
 Home Component  
-![](wireframe/Home.png)
+![](wireframe/Home.png | width=250)
+<br/>
 
 Search Component  
 ![](wireframe/Search.png)
+<br/>
 
 Information Component  
 ![](wireframe/Information.png)
